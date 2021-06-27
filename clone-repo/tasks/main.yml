@@ -1,0 +1,5 @@
+- name: Copy hello-microservice jar file to artifactory
+  ansible.builtin.git:
+    repo: "{{ repo }}"
+    dest: ./application
+    accept_hostkey: yes

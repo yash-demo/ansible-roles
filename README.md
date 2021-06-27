@@ -1,2 +1,2 @@
-# ansible-common-roles
-This repo houses the ansible common roles for automating Kubernetes deployments
+# microservice-1
+This repo holds a sample microservice to be deployed to Kubernetes

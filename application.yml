@@ -1,0 +1,11 @@
+---
+- name: Clone a microservice repo
+  hosts: localhost
+  vars:
+    repo: https://github.com/pipeline-testing/microservice.git
+
+  tasks:
+
+      - name: Run clone-repo role to clone the gradle application
+        include_role:
+          name:  clone-repo
