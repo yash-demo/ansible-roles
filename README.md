@@ -1,5 +1,6 @@
 # ansible-common-roles
 This repository houses ansible common roles:
+- clone-repo: To clone your gradle application repo in application directory.
 - set-port: To set the port for application.
 - copy-jar: To copy jar file of the application to artifactory folder.
 - docker-image: To build docker image and add to minikube registry.
