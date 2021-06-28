@@ -5,6 +5,7 @@ This repository houses ansible common roles:
 - copy-jar: To copy jar file of the application to artifactory folder.
 - docker-image: To build docker image and add to minikube registry.
 - cluster-deployment: To create a deployment and service for the image.
+- ingress-service: To create a ingress-service for the deployment.
 - pod-status: Check pod are running or not.
 
 
