@@ -11,6 +11,7 @@ This repository houses ansible common roles:
 
 1. Add the kube-config file and certificates in kube_config directory.
 2. Add your repo name in the Jenkinsfile.
-3. In the artifactory directory jar files are copied through copy-jar role.
-4. In the common_templates directory yaml files are created from the templates.
+4. In the artifactory directory jar files are copied through copy-jar role.
+5. In the common_templates directory yaml files are created from the templates.
+6. For ingress service, add the host name in your hosts file at C:\Windows\System32\drivers\etc\
 
