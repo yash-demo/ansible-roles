@@ -1,0 +1,14 @@
+---
+- name: Deployment jinja 2 template
+  template: 
+    src: ../templates/ingress.yml.j2
+    dest: ./common_templates/ingress.yml
+    
+
+- name: Create a ingress service
+  kubernetes.core.k8s:
+    kubeconfig: ./kube_config/config
+    context: minikube  
+    state: present
+    src: ./common_templates/ingress.yml
+

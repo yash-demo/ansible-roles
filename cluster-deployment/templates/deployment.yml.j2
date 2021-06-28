@@ -2,7 +2,7 @@
 apiVersion: apps/v1
 kind: Deployment
 metadata:
-  name: hello
+  name: {{ deployment_name }}
   namespace: {{ Namespace }}
 spec:
   replicas: {{ replicas }}
@@ -15,7 +15,7 @@ spec:
         app: {{ label }}
     spec:
       containers:
-      - name: hello
+      - name: {{ container_name }}
         image: {{ image_name }}
         imagePullPolicy: IfNotPresent
         ports:
@@ -25,7 +25,7 @@ spec:
 apiVersion: v1
 kind: Service
 metadata:
-  name: hello-service
+  name: {{ service_name }}
   namespace: {{ Namespace }}
 spec:
   selector:
