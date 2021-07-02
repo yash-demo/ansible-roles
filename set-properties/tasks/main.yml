@@ -1,0 +1,5 @@
+---
+- name: application.properties jinja 2 template
+  template: 
+    src: ./generic_templates/application.properties.j2
+    dest: ./src/main/resources/application.properties

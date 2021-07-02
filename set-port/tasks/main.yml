@@ -1,5 +1,0 @@
----
-- name: application.properties jinja 2 template
-  template: 
-    src: ../templates/application.properties.j2
-    dest: ./application/src/main/resources/application.properties
