@@ -1,0 +1,40 @@
+- name: Wait till pods are ready
+  kubernetes.core.k8s_info:
+    kubeconfig: "{{ kube_config }}"
+    context: "{{ context }}"
+    kind: Pod
+    label_selectors:
+      - "app = {{ label }}"
+    namespace: "{{ namespace }}"
+    wait: yes
+    wait_sleep: 2
+    wait_timeout: 200
+    wait_condition:
+      type: Ready
+      status: 'True'
+  ignore_errors: True
+
+- name: Check pod status
+  kubernetes.core.k8s_info:
+    kubeconfig: "{{ kube_config }}"
+    context: "{{ context }}"
+    kind: Pod
+    label_selectors:
+      - "app = {{ label }}"
+    namespace: "{{ namespace }}"
+    field_selectors:
+      - status.phase!=Running   
+  register: pod_list
+
+
+  
+- name: Failed pod list 
+  debug:
+    msg: "{{ item.metadata.name }} "
+  loop: "{{ pod_list.resources }}"
+  loop_control: 
+    label: "{{ item.metadata.name }} "
+
+ 
+
+    

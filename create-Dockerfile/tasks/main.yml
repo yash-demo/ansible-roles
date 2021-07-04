@@ -1,0 +1,6 @@
+---
+- name: Create Dockerfile from jinja 2 template
+  template: 
+    src: ./generic_templates/Dockerfile.j2
+    dest: ./Dockerfile
+  

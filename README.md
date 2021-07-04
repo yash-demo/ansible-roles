@@ -1,2 +1,2 @@
-# ansible-common-roles
-This repo houses the ansible common roles for automating Kubernetes deployments
+# ansible_roles
+This repo holds ansible roles to deploy to kubernetes.

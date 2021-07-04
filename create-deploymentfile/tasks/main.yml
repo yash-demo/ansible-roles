@@ -1,0 +1,8 @@
+---
+- name: Create deployment file from jinja 2 template
+  template: 
+    src: ./generic_templates/deployment.yml.j2
+    dest: ./common_templates/deployment.yml
+
+
+

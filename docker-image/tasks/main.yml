@@ -1,0 +1,8 @@
+---
+    
+- name: Build an image from Dockerfile
+  docker_image:
+    build:
+    path: .
+    name: "{{ image_name }}"
+    source: build

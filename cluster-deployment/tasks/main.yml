@@ -1,0 +1,9 @@
+---
+
+- name: Create a Deployment by reading the definition from a yaml file
+  kubernetes.core.k8s:
+    kubeconfig: "{{ kube_config }}"
+    context: "{{ context }}"
+    state: present
+    src: ./common_templates/deployment.yml
+
